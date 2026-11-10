@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aaron Israel | Sustainable finance, BI and data</title>
+<meta name="description" content="Economist working in sustainable finance and business intelligence in Montreal. Data pipelines, Power BI reporting and AI tools.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="hero wrap">
+  <p class="eyebrow">Aaron Israel</p>
+  <h1>Economist who builds the data systems behind financial decisions.</h1>
+  <p class="lede">Three years in finance and data. I turn business questions into pipelines, Power BI reporting and AI tools that teams use directly. Currently Analyst, Sustainable Finance and Business Intelligence at Investissement Québec in Montreal.</p>
+  <nav class="links" aria-label="Contact">
+    <a href="https://www.linkedin.com/in/aaron-israel-89758313b">LinkedIn</a>
+    <a href="https://github.com/Aaron-analogical">GitHub</a>
+  </nav>
+</header>
+
+<main>
+  <section class="wrap" aria-labelledby="work">
+    <h2 id="work">Selected work</h2>
+
+    <article class="project">
+      <div class="project-text">
+        <p class="kind">Personal project, live</p>
+        <h3>Economic Data Warehouse</h3>
+        <p>A production-style ELT pipeline built on public data. Python extractors pull 23 US indicators from the Federal Reserve's FRED API and 7 annual indicators for 10 countries from the World Bank, then load them into Postgres and log every run.</p>
+        <p>dbt models the raw data into tested star schemas, and a version-controlled Power BI report compares countries on top of them. It runs every day on GitHub Actions.</p>
+        <p class="stack">Python, PostgreSQL, dbt, Power BI, GitHub Actions</p>
+        <p class="actions"><a href="https://github.com/Aaron-analogical/economic-dashboard">Code</a> <a href="https://aaron-analogical.github.io/economic-dashboard/">dbt docs and lineage</a></p>
+      </div>
+      <figure>
+        <img src="img/dashboard-demo.gif" alt="Power BI country comparison report: choosing two countries and an indicator updates the cards, trend and ranking." loading="lazy" width="1428" height="796">
+      </figure>
+    </article>
+
+    <article class="project">
+      <div class="project-text">
+        <p class="kind">M.Sc. thesis, HEC Montréal</p>
+        <h3>How financing changes the fiscal multiplier</h3>
+        <p>When interest rates are stuck at zero, does it matter how a government pays for a stimulus plan? A simple model says a labor tax beats a lump-sum tax. A full dynamic model reverses that under a balanced budget, because the tax's effect on inflation outlasts the trap.</p>
+        <p>I rebuilt the thesis as a reproducible project using free tools. One command reruns the model and rebuilds every table and figure, and all 69 validation checks land within 0.005 of the corrected thesis.</p>
+        <p class="stack">Dynare, Octave, Python, DSGE modelling</p>
+        <p class="actions"><a href="https://aaron-analogical.github.io/fiscal-multiplier-liquidity-trap/">Try the interactive page</a> <a href="https://github.com/Aaron-analogical/fiscal-multiplier-liquidity-trap">Code and thesis</a></p>
+      </div>
+      <figure>
+        <img src="img/multiplier-headline.png" alt="Chart comparing lump-sum and labor tax multipliers in a liquidity trap: the better option flips between the simple and the full model." loading="lazy">
+      </figure>
+    </article>
+
+    <div class="pair">
+      <article class="note">
+        <p class="kind">CDPQ, Sustainable Investing</p>
+        <h3>Carbon reporting and ESG analytics</h3>
+        <p>Helped move the team from fragmented Excel processes to automated BI. Built the Python ETL pipeline behind CDPQ's annual public carbon footprint report, cutting processing from weeks to days, and maintained 20+ Power BI dashboards for portfolio managers and executives.</p>
+        <p class="stack">Python, Snowflake, Power BI</p>
+      </article>
+      <article class="note">
+        <p class="kind">Investissement Québec, Maxa AI</p>
+        <h3>AI tools for business teams</h3>
+        <p>Design and distribute agent skills that automate data analysis, PowerPoint and Excel work, and run workshops for non-technical teams. At Maxa AI, built a Python QA framework that checked a conversational AI's answers against ground-truth data before release.</p>
+        <p class="stack">Claude and LLM tooling, Python, Snowflake CLI, Power BI API</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="wrap" aria-labelledby="path">
+    <h2 id="path">Background</h2>
+    <ol class="timeline">
+      <li><span>2026 to now</span><div><strong>Investissement Québec</strong><br>Analyst, Sustainable Finance and Business Intelligence</div></li>
+      <li><span>2026</span><div><strong>Maxa AI</strong><br>Business Analyst and BI Developer</div></li>
+      <li><span>2024 to 2026</span><div><strong>CDPQ</strong><br>Business Intelligence Analyst, Sustainable Investing</div></li>
+      <li><span>2023</span><div><strong>CDPQ</strong><br>Analyst Intern, Economic and Financial Analysis; Geopolitical and Cross-sectoral Risk</div></li>
+      <li><span>2021 to 2023</span><div><strong>HEC Montréal</strong><br>M.Sc. Applied Economics</div></li>
+    </ol>
+  </section>
+</main>
+
+<footer class="wrap">
+  <p>Montreal, Canada. French and English. <a href="https://www.linkedin.com/in/aaron-israel-89758313b">Get in touch on LinkedIn</a>.</p>
+</footer>
+</body>
+</html>
