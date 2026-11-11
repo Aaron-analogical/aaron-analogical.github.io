@@ -41,11 +41,31 @@ a:focus-visible {
 /* Hero */
 .hero { padding-top: 88px; padding-bottom: 72px; }
 
+.topline {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
 .eyebrow {
-  margin: 0 0 20px;
+  margin: 0;
   font-weight: 600;
   color: var(--accent);
 }
+
+.lang {
+  font-size: 0.92rem;
+  font-weight: 600;
+  padding: 4px 12px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  text-decoration: none;
+  background: var(--card);
+}
+
+.lang:hover { border-color: var(--accent); }
 
 h1 {
   max-width: 17em;
@@ -61,7 +81,13 @@ h1 {
   color: var(--muted);
 }
 
-.links a { margin-right: 22px; font-weight: 600; }
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 22px;
+}
+
+.links a { font-weight: 600; }
 
 /* Sections */
 section.wrap { padding-bottom: 64px; }
@@ -91,6 +117,22 @@ h3 {
 
 .actions a { margin-right: 18px; font-weight: 600; white-space: nowrap; }
 
+/* What I do */
+.pillars {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  padding-top: 28px;
+}
+
+.pillar h3 {
+  font-size: 1.35rem;
+  padding-left: 14px;
+  border-left: 3px solid var(--accent);
+}
+
+.pillar p { margin: 0; color: var(--ink); }
+
 /* Projects */
 .project {
   display: grid;
@@ -114,6 +156,91 @@ figure img {
   border: 1px solid var(--line);
   border-radius: 4px;
   background: #fff;
+}
+
+figcaption {
+  margin-top: 10px;
+  font-size: 0.88rem;
+  color: var(--muted);
+}
+
+/* Wide project: text above, full-width figure below */
+.project.wide {
+  grid-template-columns: 1fr;
+  gap: 28px;
+}
+
+.project.wide .project-text {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+}
+
+.project.wide .project-text p:last-child { margin-bottom: 0; }
+
+.zoom { display: block; cursor: zoom-in; }
+
+/* Pipeline diagram */
+.flow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 28px 24px 22px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+}
+
+.step {
+  width: 100%;
+  max-width: 300px;
+  padding: 10px 14px;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: var(--paper);
+  text-align: center;
+  font-size: 0.92rem;
+  line-height: 1.35;
+}
+
+.step.strong {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--card);
+  font-weight: 600;
+}
+
+.arrow {
+  position: relative;
+  width: 2px;
+  height: 26px;
+  background: var(--muted);
+}
+
+.arrow::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: -5px;
+  border: 6px solid transparent;
+  border-top: 7px solid var(--muted);
+  border-bottom: 0;
+}
+
+.outputs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  width: 100%;
+  max-width: 440px;
+}
+
+.step.out { max-width: none; background: #fff; }
+
+.flow figcaption {
+  margin-top: 16px;
+  font-weight: 600;
+  color: var(--accent);
 }
 
 /* Experience notes */
@@ -161,6 +288,16 @@ footer.wrap {
   .hero { padding-top: 56px; padding-bottom: 48px; }
   .project { grid-template-columns: 1fr; gap: 24px; padding: 36px 0; }
   .project figure { order: -1; }
+  .pillars { grid-template-columns: 1fr; gap: 28px; }
+  .project.wide .project-text { grid-template-columns: 1fr; gap: 0; }
+  .project.wide .project-text > div:first-child p:last-child { margin-bottom: 1em; }
   .pair { grid-template-columns: 1fr; padding-top: 36px; }
   .timeline li { grid-template-columns: 1fr; gap: 2px; }
+}
+
+@media (max-width: 480px) {
+  .wrap { padding-left: 16px; padding-right: 16px; }
+  .note { padding: 22px 18px; }
+  .outputs { grid-template-columns: 1fr; }
+  .links a[href^="mailto"] { overflow-wrap: anywhere; }
 }

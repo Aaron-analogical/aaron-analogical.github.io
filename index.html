@@ -3,37 +3,79 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Aaron Israel | Sustainable finance, BI and data</title>
-<meta name="description" content="Economist working in sustainable finance and business intelligence in Montreal. Data pipelines, Power BI reporting and AI tools.">
+<title>Aaron Israel | Business intelligence, data and AI</title>
+<meta name="description" content="I help businesses make better decisions by analyzing their data and putting AI to work. Business analytics specialist and economist in Montreal.">
+<link rel="canonical" href="https://aaron-analogical.github.io/">
+<link rel="alternate" hreflang="en" href="https://aaron-analogical.github.io/">
+<link rel="alternate" hreflang="fr" href="https://aaron-analogical.github.io/fr/">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://aaron-analogical.github.io/">
+<meta property="og:title" content="Aaron Israel | Business intelligence, data and AI">
+<meta property="og:description" content="I help businesses make better decisions by analyzing their data and putting AI to work. Business analytics, automation and practical AI, in Montreal.">
+<meta property="og:image" content="https://aaron-analogical.github.io/img/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_CA">
+<meta property="og:locale:alternate" content="fr_CA">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <header class="hero wrap">
-  <p class="eyebrow">Aaron Israel</p>
-  <h1>Economist who builds the data systems behind financial decisions.</h1>
-  <p class="lede">Three years in finance and data. I turn business questions into pipelines, Power BI reporting and AI tools that teams use directly. Currently Analyst, Sustainable Finance and Business Intelligence at Investissement Québec in Montreal.</p>
+  <div class="topline">
+    <p class="eyebrow">Aaron Israel</p>
+    <a class="lang" href="fr/" hreflang="fr" lang="fr">Français</a>
+  </div>
+  <h1>I help businesses make better decisions by analyzing their data and putting AI to work.</h1>
+  <p class="lede">Economist by training, specialized in business analytics, with three years in finance and data. I find out what decision-makers need, build the dashboards and reports that answer it, automate the tedious work behind them, and show managers how to use AI tools in their own work. Currently Analyst, Sustainable Finance and Business Intelligence at Investissement Québec in Montreal.</p>
   <nav class="links" aria-label="Contact">
+    <a href="mailto:aaron.israel011@gmail.com">aaron.israel011@gmail.com</a>
+    <a href="cv/Aaron_Israel_Resume.pdf">Resume (PDF)</a>
     <a href="https://www.linkedin.com/in/aaron-israel-89758313b">LinkedIn</a>
     <a href="https://github.com/Aaron-analogical">GitHub</a>
   </nav>
 </header>
 
 <main>
+  <section class="wrap" aria-labelledby="offer">
+    <h2 id="offer">What I do</h2>
+    <div class="pillars">
+      <div class="pillar">
+        <h3>Insight for decisions</h3>
+        <p>I turn business questions into clear dashboards and reports that leaders use directly. At CDPQ, 20+ dashboards let portfolio managers and executives track ESG KPIs across the global portfolio.</p>
+      </div>
+      <div class="pillar">
+        <h3>Automation of tedious work</h3>
+        <p>I replace manual Excel and copy-paste steps with Python pipelines and automated workflows, so analysis arrives faster and with fewer errors. CDPQ's carbon report went from weeks of processing to days.</p>
+      </div>
+      <div class="pillar">
+        <h3>AI put to work</h3>
+        <p>I set up AI tools inside business teams, such as agent skills that handle routine analysis, PowerPoint and Excel work, and explain them in plain terms to managers through workshops.</p>
+      </div>
+    </div>
+  </section>
+
   <section class="wrap" aria-labelledby="work">
     <h2 id="work">Selected work</h2>
 
-    <article class="project">
+    <article class="project wide">
       <div class="project-text">
-        <p class="kind">Personal project, live</p>
-        <h3>Economic Data Warehouse</h3>
-        <p>A production-style ELT pipeline built on public data. Python extractors pull 23 US indicators from the Federal Reserve's FRED API and 7 annual indicators for 10 countries from the World Bank, then load them into Postgres and log every run.</p>
-        <p>dbt models the raw data into tested star schemas, and a version-controlled Power BI report compares countries on top of them. It runs every day on GitHub Actions.</p>
-        <p class="stack">Python, PostgreSQL, dbt, Power BI, GitHub Actions</p>
-        <p class="actions"><a href="https://github.com/Aaron-analogical/economic-dashboard">Code</a> <a href="https://aaron-analogical.github.io/economic-dashboard/">dbt docs and lineage</a></p>
+        <div>
+          <p class="kind">Personal project, live</p>
+          <h3>Economic Data Warehouse</h3>
+          <p>A production-style ELT pipeline built on public data. Python extractors pull 23 US indicators from the Federal Reserve's FRED API and 7 annual indicators for 10 countries from the World Bank, then load them into Postgres and log every run.</p>
+        </div>
+        <div>
+          <p>dbt models the raw data into tested star schemas, and a version-controlled Power BI report compares countries on top of them. It runs every day on GitHub Actions.</p>
+          <p class="stack">Python, PostgreSQL, dbt, Power BI, GitHub Actions</p>
+          <p class="actions"><a href="https://github.com/Aaron-analogical/economic-dashboard">Code</a> <a href="https://aaron-analogical.github.io/economic-dashboard/">dbt docs and lineage</a></p>
+        </div>
       </div>
       <figure>
-        <img src="img/dashboard-demo.gif" alt="Power BI country comparison report: choosing two countries and an indicator updates the cards, trend and ranking." loading="lazy" width="1428" height="796">
+        <a href="img/dashboard-demo.gif" class="zoom"><img src="img/dashboard-demo.gif" alt="Power BI country comparison report: choosing two countries and an indicator updates the cards, trend and ranking." loading="lazy" width="1428" height="796"></a>
+        <figcaption>Power BI country comparison. <a href="img/dashboard-demo.gif">Open full size</a></figcaption>
       </figure>
     </article>
 
@@ -42,7 +84,7 @@
         <p class="kind">M.Sc. thesis, HEC Montréal</p>
         <h3>How financing changes the fiscal multiplier</h3>
         <p>When interest rates are stuck at zero, does it matter how a government pays for a stimulus plan? A simple model says a labor tax beats a lump-sum tax. A full dynamic model reverses that under a balanced budget, because the tax's effect on inflation outlasts the trap.</p>
-        <p>I rebuilt the thesis as a reproducible project using free tools. One command reruns the model and rebuilds every table and figure, and all 69 validation checks land within 0.005 of the corrected thesis.</p>
+        <p>I rebuilt the thesis as a reproducible project using free tools. One command reruns the model and rebuilds every table and figure, and all 69 validation checks land within 0.005 of the thesis results.</p>
         <p class="stack">Dynare, Octave, Python, DSGE modelling</p>
         <p class="actions"><a href="https://aaron-analogical.github.io/fiscal-multiplier-liquidity-trap/">Try the interactive page</a> <a href="https://github.com/Aaron-analogical/fiscal-multiplier-liquidity-trap">Code and thesis</a></p>
       </div>
@@ -51,18 +93,40 @@
       </figure>
     </article>
 
+    <article class="project">
+      <div class="project-text">
+        <p class="kind">CDPQ, Sustainable Investing, 2024 to 2026</p>
+        <h3>Carbon reporting and ESG analytics</h3>
+        <p>Helped move the team from fragmented Excel processes to automated reporting. Built the Python ETL pipeline behind CDPQ's annual public carbon footprint report, cutting processing from weeks to days, and maintained 20+ Power BI dashboards for portfolio managers and executives.</p>
+        <p class="stack">Python, Snowflake, Power BI</p>
+      </div>
+      <figure class="flow" aria-label="Diagram: Excel files and data feeds go through a Python ETL into Snowflake, which feeds the annual carbon footprint report and 20+ Power BI dashboards.">
+        <div class="step">Excel files and data feeds</div>
+        <div class="arrow" aria-hidden="true"></div>
+        <div class="step strong">Python ETL</div>
+        <div class="arrow" aria-hidden="true"></div>
+        <div class="step strong">Snowflake</div>
+        <div class="arrow split" aria-hidden="true"></div>
+        <div class="outputs">
+          <div class="step out">Annual public carbon footprint report</div>
+          <div class="step out">20+ Power BI dashboards for portfolio managers and executives</div>
+        </div>
+        <figcaption>Processing time: weeks to days</figcaption>
+      </figure>
+    </article>
+
     <div class="pair">
       <article class="note">
-        <p class="kind">CDPQ, Sustainable Investing</p>
-        <h3>Carbon reporting and ESG analytics</h3>
-        <p>Helped move the team from fragmented Excel processes to automated BI. Built the Python ETL pipeline behind CDPQ's annual public carbon footprint report, cutting processing from weeks to days, and maintained 20+ Power BI dashboards for portfolio managers and executives.</p>
-        <p class="stack">Python, Snowflake, Power BI</p>
+        <p class="kind">Investissement Québec, 2026 to now</p>
+        <h3>AI tools for business teams</h3>
+        <p>Design and distribute agent skills that automate data analysis, PowerPoint and Excel work across the organization, inside a Copilot-restricted environment. Run workshops that turn GenAI concepts into daily practice for non-technical teams.</p>
+        <p class="stack">Claude and LLM tooling, Power BI, Snowflake</p>
       </article>
       <article class="note">
-        <p class="kind">Investissement Québec, Maxa AI</p>
-        <h3>AI tools for business teams</h3>
-        <p>Design and distribute agent skills that automate data analysis, PowerPoint and Excel work, and run workshops for non-technical teams. At Maxa AI, built a Python QA framework that checked a conversational AI's answers against ground-truth data before release.</p>
-        <p class="stack">Claude and LLM tooling, Python, Snowflake CLI, Power BI API</p>
+        <p class="kind">Maxa AI, 2026</p>
+        <h3>Testing a conversational AI before release</h3>
+        <p>Built a Python QA framework that checked the answers of Maxa Analyst, a Snowflake-native conversational AI, against ground-truth data mart values before each production release, across multiple client configurations.</p>
+        <p class="stack">Python, Snowflake CLI, Power BI Service API</p>
       </article>
     </div>
   </section>
@@ -70,17 +134,17 @@
   <section class="wrap" aria-labelledby="path">
     <h2 id="path">Background</h2>
     <ol class="timeline">
-      <li><span>2026 to now</span><div><strong>Investissement Québec</strong><br>Analyst, Sustainable Finance and Business Intelligence</div></li>
-      <li><span>2026</span><div><strong>Maxa AI</strong><br>Business Analyst and BI Developer</div></li>
-      <li><span>2024 to 2026</span><div><strong>CDPQ</strong><br>Business Intelligence Analyst, Sustainable Investing</div></li>
-      <li><span>2023</span><div><strong>CDPQ</strong><br>Analyst Intern, Economic and Financial Analysis; Geopolitical and Cross-sectoral Risk</div></li>
+      <li><span>Aug 2026 to now</span><div><strong>Investissement Québec</strong><br>Analyst, Sustainable Finance and Business Intelligence</div></li>
+      <li><span>Jan to Aug 2026</span><div><strong>Maxa AI</strong><br>Business Analyst and BI Developer</div></li>
+      <li><span>Feb 2024 to Jan 2026</span><div><strong>CDPQ</strong><br>Business Intelligence Analyst, Sustainable Investing</div></li>
+      <li><span>May to Dec 2023</span><div><strong>CDPQ</strong><br>Analyst Intern, Economic and Financial Analysis; Geopolitical and Cross-sectoral Risk</div></li>
       <li><span>2021 to 2023</span><div><strong>HEC Montréal</strong><br>M.Sc. Applied Economics</div></li>
     </ol>
   </section>
 </main>
 
 <footer class="wrap">
-  <p>Montreal, Canada. French and English. <a href="https://www.linkedin.com/in/aaron-israel-89758313b">Get in touch on LinkedIn</a>.</p>
+  <p>Montreal, Canada. French and English. Write to <a href="mailto:aaron.israel011@gmail.com">aaron.israel011@gmail.com</a> or <a href="https://www.linkedin.com/in/aaron-israel-89758313b">connect on LinkedIn</a>. <a href="cv/Aaron_Israel_Resume.pdf">Download my resume</a>.</p>
 </footer>
 </body>
 </html>
