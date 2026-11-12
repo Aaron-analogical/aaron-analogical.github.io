@@ -173,8 +173,10 @@ figcaption {
 .project.wide .project-text {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 48px;
+  gap: 0 48px;
 }
+
+.project.wide .project-head { grid-column: 1 / -1; }
 
 .project.wide .project-text p:last-child { margin-bottom: 0; }
 
@@ -290,7 +292,7 @@ footer.wrap {
   .project figure { order: -1; }
   .pillars { grid-template-columns: 1fr; gap: 28px; }
   .project.wide .project-text { grid-template-columns: 1fr; gap: 0; }
-  .project.wide .project-text > div:first-child p:last-child { margin-bottom: 1em; }
+  .project.wide .project-text > div:nth-child(2) p:last-child { margin-bottom: 1em; }
   .pair { grid-template-columns: 1fr; padding-top: 36px; }
   .timeline li { grid-template-columns: 1fr; gap: 2px; }
 }
