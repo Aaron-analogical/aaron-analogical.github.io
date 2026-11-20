@@ -38,21 +38,73 @@ a:focus-visible {
   outline-offset: 3px;
 }
 
-/* Hero */
-.hero { padding-top: 88px; padding-bottom: 72px; }
-
-.topline {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  gap: 16px;
-  margin-bottom: 20px;
+/* Site header and tabs */
+.site {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--paper);
+  border-bottom: 1px solid var(--line);
 }
 
-.eyebrow {
-  margin: 0;
+.site .wrap {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 20px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.brand {
+  margin-right: auto;
+  font: 400 1.3rem/1.2 var(--serif);
+  color: var(--ink);
+  text-decoration: none;
+}
+
+/* The big name is right below on the home tab, so the small one steps aside. */
+html[data-tab="home"] .brand { visibility: hidden; }
+
+.tabs { display: flex; gap: 4px; }
+
+.tabs a {
+  padding: 5px 14px;
+  border-radius: 999px;
+  font-size: 0.95rem;
   font-weight: 600;
-  color: var(--accent);
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.tabs a:hover { color: var(--accent); }
+
+.tabs a[aria-current="page"] {
+  background: var(--accent);
+  color: var(--card);
+}
+
+/* Panels: with JavaScript only the current tab shows; without it they stack. */
+.panel { scroll-margin-top: 72px; }
+
+.panel:focus { outline: none; }
+
+.panel + .panel { padding-top: 48px; }
+
+html[data-tab] .panel { display: none; padding-top: 48px; }
+
+html[data-tab="home"] #home { display: block; padding-top: 0; }
+
+html[data-tab="work"] #work,
+html[data-tab="background"] #background { display: block; }
+
+/* Hero */
+.hero { padding-top: 72px; padding-bottom: 72px; }
+
+.tagline {
+  max-width: 24em;
+  margin: 0 0 20px;
+  font: 400 clamp(1.4rem, 3vw, 2rem)/1.25 var(--serif);
 }
 
 .lang {
@@ -68,10 +120,9 @@ a:focus-visible {
 .lang:hover { border-color: var(--accent); }
 
 h1 {
-  max-width: 17em;
   margin: 0 0 24px;
-  font: 400 clamp(2.2rem, 5.4vw, 3.6rem)/1.12 var(--serif);
-  letter-spacing: -0.01em;
+  font: 400 clamp(3.4rem, 11vw, 7rem)/1 var(--serif);
+  letter-spacing: -0.02em;
 }
 
 .lede {
@@ -133,6 +184,29 @@ h3 {
 
 .pillar p { margin: 0; color: var(--ink); }
 
+/* Home teaser */
+.teaser {
+  display: grid;
+  grid-template-columns: 5fr 6fr;
+  gap: 40px;
+  align-items: center;
+  padding-top: 28px;
+}
+
+.teaser p { margin-top: 0; }
+
+.teaser .actions { margin-bottom: 0; }
+
+.after-list { margin: 28px 0 0; }
+
+.nw { white-space: nowrap; }
+
+.section-note {
+  margin: 0;
+  font-size: 0.92rem;
+  color: var(--muted);
+}
+
 /* Projects */
 .project {
   display: grid;
@@ -144,6 +218,9 @@ h3 {
 }
 
 .project p { margin-top: 0; }
+
+/* The next section's heading rule already closes the group. */
+.project:last-child { border-bottom: 0; }
 
 .project .actions { margin-bottom: 0; }
 
@@ -287,14 +364,21 @@ footer.wrap {
 }
 
 @media (max-width: 800px) {
-  .hero { padding-top: 56px; padding-bottom: 48px; }
+  .hero { padding-top: 48px; padding-bottom: 48px; }
+  .teaser { grid-template-columns: 1fr; gap: 20px; }
+  html[data-tab] .panel, .panel + .panel { padding-top: 32px; }
+  html[data-tab="home"] #home { padding-top: 0; }
   .project { grid-template-columns: 1fr; gap: 24px; padding: 36px 0; }
-  .project figure { order: -1; }
   .pillars { grid-template-columns: 1fr; gap: 28px; }
   .project.wide .project-text { grid-template-columns: 1fr; gap: 0; }
   .project.wide .project-text > div:nth-child(2) p:last-child { margin-bottom: 1em; }
   .pair { grid-template-columns: 1fr; padding-top: 36px; }
   .timeline li { grid-template-columns: 1fr; gap: 2px; }
+}
+
+@media (max-width: 600px) {
+  .tabs { order: 3; flex-basis: 100%; margin-left: -14px; }
+  .panel { scroll-margin-top: 104px; }
 }
 
 @media (max-width: 480px) {
